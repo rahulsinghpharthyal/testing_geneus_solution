@@ -1,10 +1,8 @@
-import React, { useState } from "react";
-import img1 from "../assets/banner.jpeg";
+import { useState } from "react";
 import "./Courses.css";
 import { useCourcesQuery } from "../features/cources/courceApiSlice";
 import CourseCard from "../components/Courses/CourseCard";
-import CourseBanner from "../components/Courses/CourseBanner";
-import { IoMdArrowDropdown, IoMdSearch } from "react-icons/io";
+import { IoMdArrowDropdown } from "react-icons/io";
 import Loading from "../components/loading/Loading";
 
 const Courses = ({ searchResults }) => {

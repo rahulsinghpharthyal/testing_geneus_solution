@@ -1,4 +1,4 @@
-import React, { useState, useTransition } from "react";
+import { useState, useTransition } from "react";
 import { MdEmail } from "react-icons/md";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import "./ContactUs.css";
@@ -44,9 +44,9 @@ const ContactUs = () => {
     subject: "",
     message: "",
   });
-  const [isPending, startTransition] = useTransition();
-  const [errorMsg, setErrorMsg] = useState();
-  const [contactUs, { isLoading, isError, error, data }] =
+  const [ startTransition] = useTransition();
+  const [ setErrorMsg] = useState();
+  const [contactUs ] =
     useContactUsMutation();
 
   const handleChange = (e) => {
