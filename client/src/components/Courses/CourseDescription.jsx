@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
-import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import './CourseDescription.css';
 import { useAddToCartMutation } from "../../features/Cart/cartApiSlice";
@@ -19,7 +18,7 @@ import CourseNotes from "./CourseNotes";
 const CourseDescription = ({ courseDetails }) => {
 
   const [discount, setDiscount] = useState(0);
-  const [len, setLen] = useState(0);
+  const [,setLen] = useState(0);
 
   const [formattedCourseIntro, setFormattedCourseIntro] = useState("");
   const [formattedCourseIntro2, setFormattedCourseIntro2] = useState("");
@@ -30,9 +29,9 @@ const CourseDescription = ({ courseDetails }) => {
   // state for fetching all course contents
   const [courseContents, setcourseContents] = useState([]);
 
-  const [ip, setIp] = useState("");
-  const [city, setCity] = useState("");
-  const [error, setError] = useState("");
+  const [, setIp] = useState("");
+  const [, setCity] = useState("");
+  const [, setError] = useState("");
 
   //Unnassasaary code:-
   useEffect(() => {

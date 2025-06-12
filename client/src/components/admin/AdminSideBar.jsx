@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   FaUsers,
   FaBookOpen,
   FaPlusSquare,
-  FaCartPlus,
   FaUser,
-  FaCog,
   FaSignOutAlt,
   FaAppleAlt,
   FaUserFriends,

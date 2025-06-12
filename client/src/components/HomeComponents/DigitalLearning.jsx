@@ -1,9 +1,8 @@
-import React from "react";
 import Slider from "react-slick";
 import "./DigitalLearning.css";
 import hero1 from "../../assets/homeimage.png";
 import hero2 from "../../assets/NutriImage.png";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const slides = [

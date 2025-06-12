@@ -57,11 +57,11 @@ const Courses = ({ searchResults }) => {
       ? advancedCourses
       : searchedCourses?.filter((course) => course?.enabled === true);
 
-  const course = {
-    title: "Course",
-    description:
-      "There are many courses listed here, select the course of your choice.",
-  };
+  // const course = {
+  //   title: "Course",
+  //   description:
+  //     "There are many courses listed here, select the course of your choice.",
+  // };
 
   return (
     <div>

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import MyLearningCourseContent from "./My_Learning_CourseContent";
 
 import "../../styles/MyLearningCourseDetails.css";
 
@@ -31,6 +30,7 @@ const MyLearningCourseDetails = ({ data }) => {
         </p>
         <div className="my-learning-video-container">
           <iframe
+          title="content"
             src={currentContent?.url && `${currentContent?.url}?rel=0`}
             width="100%"
             height="400px"

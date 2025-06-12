@@ -1,4 +1,3 @@
-import  { useState } from 'react';
 import '../../../styles/UserEnquiry.css'
 import { useDeleteQueryMutation, useGetEnqueryQuery, useUpdateQueryMutation } from '../../../features/supportAndQuery/SupportAndQueryApiSlice';
 import { FaTrash } from 'react-icons/fa';
