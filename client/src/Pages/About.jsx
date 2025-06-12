@@ -1,6 +1,5 @@
 import "./About.css";
 import AboutUs from "../components/HomeComponents/AboutUs";
-import { styled } from "@mui/material/styles";
 import { Box, Typography } from "@mui/material";
 import { FaBalanceScale, FaBullseye, FaEye } from "react-icons/fa";
 import CircleCard from "../components/About/CircleCard";
