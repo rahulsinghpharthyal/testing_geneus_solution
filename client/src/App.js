@@ -19,7 +19,6 @@ import AddProduct from "./Pages/adminPages/addProduct/AddProduct";
 import AddCourse from "./Pages/adminPages/addCourse/AddCourse";
 
 import CourseDescriptionPage from "./Pages/CourseDescritptionPage";
-import LoginSignUpPage from "./Pages/LoginSignUpPage";
 import PageNotFound from "./Pages/PageNotFound";
 
 // import Mylearning from "./components/MyLearning/MyLearning";

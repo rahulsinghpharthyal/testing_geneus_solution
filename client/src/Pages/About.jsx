@@ -1,13 +1,7 @@
-import React from "react";
-import img1 from "../assets/banner.jpeg";
-import nutriImage from '../assets/nutriImage.jpg';
-import courseImage from '../assets/courses.jpg';
-import img2 from "../assets/why choose us.png";
 import "./About.css";
 import AboutUs from "../components/HomeComponents/AboutUs";
 import { styled } from "@mui/material/styles";
 import { Box, Typography } from "@mui/material";
-import SettingsIcon from "@mui/icons-material/Settings";
 import { FaBalanceScale, FaBullseye, FaEye } from "react-icons/fa";
 import CircleCard from "../components/About/CircleCard";
 import AboutUsFirst from "../components/About/AboutUsFirst";
