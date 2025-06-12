@@ -62,7 +62,7 @@ function App() {
     try {
 
       if (!user?.id) return;
-      const data = await logout().unwrap();
+     await logout().unwrap();
 
       dispatch(logOut());
       
