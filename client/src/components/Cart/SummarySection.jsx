@@ -21,7 +21,7 @@ const SummarySection = ({
   const [appliedCoupon, setAppliedCoupon] = useState("");
 
   const [courseCheckout,{isLoading}] = useCourseCheckoutMutation();
-  console.log('this is appliedCoupon', appliedCoupon)
+  console.log('this is appliedCouponfrom summary', appliedCoupon)
   return (
     <div className="summary-section">
       <h2 className="summary-title">Summary</h2>
