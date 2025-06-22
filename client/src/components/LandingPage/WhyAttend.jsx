@@ -1,4 +1,6 @@
+import React from "react";
 import "./WhyAttend.css";
+import { MdArrowCircleRight } from "react-icons/md";
 
 const WhyAttend = ({course}) => {
 

@@ -1,7 +1,11 @@
+import React from "react";
 import "./Footer.css"; // Import the CSS for styling
 import {
   FaInstagram,
+  FaWhatsapp,
+  FaMapMarkerAlt,
   FaEnvelope,
+  FaPhoneAlt,
   FaFacebook,
   FaLinkedin,
 } from "react-icons/fa";

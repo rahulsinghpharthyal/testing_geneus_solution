@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useNavigate,useLocation } from "react-router-dom";
 import "../../styles/My_LearningSidebar.css";
 
@@ -14,7 +14,7 @@ const MyLearningSidebar = ({data}) => {
     if(!courseId && data?.courses?.length>=0){
       navigate('/my-learning/', { state: { courseId: data?.courses[0]?._id } });
     }
-  }, [courseId,data?.courses, navigate]);
+  }, [courseId,data?.courses]);
 
   const handleActiveCourse = (courseId) => {
     navigate('/my-learning/', { state: { courseId } });

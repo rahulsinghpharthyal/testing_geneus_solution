@@ -15,7 +15,7 @@ const MyLearningCourseContent = ({data}) => {
     if(!currentContent && data?.courseContent?.length>=0){
       navigate('/my-learning/', { state: {courseId,content:data?.courseContent[0] } });
     }
-  }, [courseId,currentContent,data, navigate]);
+  }, [courseId,currentContent,data]);
 
   const handleCurrentVideo = (content) => {
     navigate('/my-learning/', { state: { courseId,content } });

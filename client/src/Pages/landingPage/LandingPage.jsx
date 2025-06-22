@@ -1,3 +1,4 @@
+import React from "react";
 import "./LandingPage.css";
 import Background from "../../components/LandingPage/Background";
 import WhyAttend from "../../components/LandingPage/WhyAttend";
@@ -17,7 +18,7 @@ const LandingPage = () => {
 
   const { id } = useParams();
   const { user } = useSelector((state) => state.auth);
-  const { data: course } = useCourceQuery(
+  const { data: course, error } = useCourceQuery(
     { id, user_id: user?.id },
     { skip: !id }
   );

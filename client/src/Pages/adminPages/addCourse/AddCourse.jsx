@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAddCourseMutation, useUpdateCourseMutation } from '../../../features/Course/CourseApiSlice';
 import '../../../styles/AddCourse.css';
 import { useLocation } from 'react-router-dom';
@@ -96,7 +96,7 @@ const AddCourse = () => {
         const response = await updateCourse({courseId: existingData?._id, ...course}).unwrap();
         alert(response.message);
       }else{
-     await addCourse(course).unwrap();
+      const response = await addCourse(course).unwrap();
       alert('Course added successfully!');
       // console.log(response);
       }

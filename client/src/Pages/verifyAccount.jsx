@@ -23,7 +23,7 @@ const VerifyAccount = ({email,handleVerifyNav = null}) => {
             console.log('no email found')
             navigate(-1); // Go back to the previous path
         }
-    }, [email,location,navigate])
+    }, [location,navigate])
 
     // console.log('sendOTP : ',sendOTP)
     

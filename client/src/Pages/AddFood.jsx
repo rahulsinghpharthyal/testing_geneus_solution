@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
@@ -89,7 +89,7 @@ const AddFoodToLunch = ({mealName,handleClose}) => {
 
         console.log("Selected Foods:", food);
 
-        await addFood({user:user?.id,[selectedMeal.toLowerCase()]:food}).unwrap();
+        const data = await addFood({user:user?.id,[selectedMeal.toLowerCase()]:food}).unwrap();
 
         toast.success("food added successfully!");
         handleClose&&handleClose();
