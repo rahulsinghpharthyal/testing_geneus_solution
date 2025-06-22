@@ -24,7 +24,8 @@ const StockTable = () => {
   const [symbols, setSymbols] = useState();
   const [suggestions, setSuggestions] = useState([]);
   const [activeInputIndex, setActiveInputIndex] = useState(null);
-
+  console.log('this is all stockSymbols', stockSymbols);
+  
   useEffect(() => {
     if (userStocks?.data && userStocks?.data?.length > 0) {
       // If the backend returns user stocks, set them to the local state
