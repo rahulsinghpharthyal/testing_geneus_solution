@@ -44,7 +44,7 @@ const StockTable = () => {
 
   useEffect(() => {
     if (stockSymbols) {
-      setSymbols(stockSymbols.map((sym) => sym.symbol));
+      setSymbols(stockSymbols?.map((sym) => sym.symbol));
     }
   }, [stockSymbols]);
 
@@ -52,7 +52,7 @@ const StockTable = () => {
 
   const fetchCurrentPrice = async (index) => {
     const stock = stocks[index];
-    const symbol = stock.name?.toUpperCase().trim();
+    const symbol = stock?.name?.toUpperCase().trim();
 
     if (!symbol) {
       alert("Please enter a valid stock symbol.");
@@ -71,10 +71,10 @@ const StockTable = () => {
     try {
       let response;
 
-      if (stock._id) {
+      if (stock?._id) {
         // Update stock
         response = await updateStock({
-          id: stock._id,
+          id: stock?._id,
           stock: {
             name: symbol,
             shares,
@@ -97,20 +97,20 @@ const StockTable = () => {
       if (response.success === true) {
         toast.success(response.message);
       }
-      const savedStock = response.data;
+      const savedStock = response?.data;
 
       // Update state
       setStocks((prevStocks) => {
         const updatedStocks = [...prevStocks];
         updatedStocks[index] = {
-          name: savedStock.stockName,
-          shares: savedStock.purchasedShares,
-          buyPrice: savedStock.buyPrice,
-          purchaseDate: savedStock.purchaseDate,
-          currentPrice: savedStock.currentPrice,
-          profit: savedStock.profit,
-          profitPercent: savedStock.profitPercentage,
-          _id: savedStock._id,
+          name: savedStock?.stockName,
+          shares: savedStock?.purchasedShares,
+          buyPrice: savedStock?.buyPrice,
+          purchaseDate: savedStock?.purchaseDate,
+          currentPrice: savedStock?.currentPrice,
+          profit: savedStock?.profit,
+          profitPercent: savedStock?.profitPercentage,
+          _id: savedStock?._id,
         };
         return updatedStocks;
       });
@@ -138,7 +138,7 @@ const StockTable = () => {
     // Update suggestions if typing in name
     if (field === "name") {
       const inputVal = value.toUpperCase();
-      const filtered = symbols.filter((sym) =>
+      const filtered = symbols?.filter((sym) =>
         sym.toUpperCase().startsWith(inputVal)
       );
       setSuggestions(filtered);
@@ -285,8 +285,8 @@ const StockTable = () => {
             </tr>
           </thead>
           <tbody>
-            {stocks.map((stock, idx) => {
-              const profitPercent = parseFloat(stock.profitPercent);
+            {stocks?.map((stock, idx) => {
+              const profitPercent = parseFloat(stock?.profitPercent);
               const profitStyle =
                 !isNaN(profitPercent) && stock.profitPercent !== "-"
                   ? profitPercent >= 0
@@ -314,7 +314,7 @@ const StockTable = () => {
                       onFocus={() => setActiveInputIndex(idx)}
                       onBlur={() => setTimeout(() => setSuggestions([]), 150)}
                     />
-                    {activeInputIndex === idx && suggestions.length > 0 && (
+                    {activeInputIndex === idx && suggestions?.length > 0 && (
                       <div
                         style={{
                           position: "absolute",
@@ -329,7 +329,7 @@ const StockTable = () => {
                           color: "#1E90FF",
                         }}
                       >
-                        {suggestions.map((s, i) => (
+                        {suggestions?.map((s, i) => (
                           <div
                             key={i}
                             style={{
@@ -349,7 +349,7 @@ const StockTable = () => {
                     <input
                       type="number"
                       style={styles.input}
-                      value={stock.shares}
+                      value={stock?.shares}
                       onChange={(e) =>
                         handleChange(idx, "shares", e.target.value)
                       }
@@ -358,8 +358,8 @@ const StockTable = () => {
                   <td style={styles.td}>
                     <input
                       type="number"
-                      style={styles.input}
-                      value={stock.buyPrice}
+                      style={styles?.input}
+                      value={stock?.buyPrice}
                       onChange={(e) =>
                         handleChange(idx, "buyPrice", e.target.value)
                       }
@@ -368,27 +368,27 @@ const StockTable = () => {
                   <td style={styles.td}>
                     <input
                       type="date"
-                      style={styles.input}
-                      value={stock.purchaseDate}
+                      style={styles?.input}
+                      value={stock?.purchaseDate}
                       onChange={(e) =>
                         handleChange(idx, "purchaseDate", e.target.value)
                       }
                     />
                   </td>
-                  <td style={styles.td}>{stock.currentPrice}</td>
+                  <td style={styles.td}>{stock?.currentPrice}</td>
                   <td style={styles.td}>
-                    {stock.profit}{" "}
+                    {stock?.profit}{" "}
                     {!isNaN(profitPercent) &&
                       stock.profitPercent !== "-" &&
                       (profitPercent >= 0 ? (
-                        <span style={styles.arrowUp}>↑</span>
+                        <span style={styles?.arrowUp}>↑</span>
                       ) : (
-                        <span style={styles.arrowDown}>↓</span>
+                        <span style={styles?.arrowDown}>↓</span>
                       ))}
                   </td>
                   <td style={{ ...styles.td, ...profitStyle }}>
-                    {stock.profitPercent !== "-"
-                      ? `${stock.profitPercent}%`
+                    {stock?.profitPercent !== "-"
+                      ? `${stock?.profitPercent}%`
                       : "-"}
                   </td>
                   <td style={styles.td}>
